@@ -52,12 +52,24 @@ def main():
     check_python_version()
        
     print ('Welcome to dice rolling game!\n Your dice got 10 faces\n To Play:')
+    
+    player_count = input('Please reply with 1 for single player and 2 for two players')
+    
+    if int(player_count) > 1 :
+        
+        print ('Assuming 2 players on board...')
         
     user_response = input('Reply with \'r\' to roll,\'e\' to exit: ')
+    
+    
     
     score_after_throw = 0
     
     throws = 0
+    
+    secondplayer_score_after_throw = 0
+    
+    secondplayer_throws = 0
     
     if user_response == 'r' or user_response == 'yes':
         
